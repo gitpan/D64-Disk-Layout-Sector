@@ -40,7 +40,7 @@ D64::Disk::Layout::Sector - An abstraction layer over physical sector data of va
 
   # Get/set sector location of the object data in the actual disk image:
   my $sector = $object->sector();
-  $object->sector($track);
+  $object->sector($sector);
 
   # Check if first two bytes of data point to the next chunk of data in a chain:
   my $is_valid_ts_link = $object->is_valid_ts_link();
@@ -81,7 +81,7 @@ use strict;
 use utf8;
 use warnings;
 
-our $VERSION = 0.01;
+our $VERSION = '0.02';
 
 use Data::Dumper;
 use Readonly;
@@ -704,7 +704,7 @@ Pawel Krol, E<lt>pawelkrol@cpan.orgE<gt>.
 
 =head1 VERSION
 
-Version 0.01 (2013-02-08)
+Version 0.02 (2013-02-10)
 
 =head1 COPYRIGHT AND LICENSE
 
